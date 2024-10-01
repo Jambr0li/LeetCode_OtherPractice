@@ -3,6 +3,7 @@ fn main() {
 	println!("{:?}", vector);
 	quicksort(&mut vector);
 	println!("{:?}", vector);
+	print_vec(&vector[2..]);
 }
 
 fn quicksort(vector: &mut [usize]){
@@ -26,4 +27,8 @@ fn partition(vector: &mut [usize]) -> usize{
 	}
 	vector.swap(i, vector.len() - 1);
 	i
+}
+
+fn print_vec(vector: &[usize]) {
+	println!("{:?}", vector);
 }
