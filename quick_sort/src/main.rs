@@ -3,10 +3,11 @@ fn main() {
 	println!("{:?}", vector);
 	quicksort(&mut vector);
 	println!("{:?}", vector);
-	print_vec(&vector[2..]);
+	print_slice(&vector[2..5]);
+	print_vec(vector);
 }
 
-fn quicksort(vector: &mut [usize]){
+fn quicksort(vector: &mut [usize]) {
 	if vector.len() <= 1 {
 		return;
 	}
@@ -16,19 +17,24 @@ fn quicksort(vector: &mut [usize]){
 	quicksort(right);
 }
 
-fn partition(vector: &mut [usize]) -> usize{
+fn partition(vector: &mut [usize]) -> usize {
 	let pivot = vector[vector.len() - 1];
-	let mut i:usize = 0;
-	for j in 0..vector.len() - 1 {
-		if vector[j] > pivot{
-			vector.swap(i, j);
+	let mut i = 0;
+
+	for j in 0..vector.len() - 1{
+		if vector[j] > pivot {
+			vector.swap(i,j);
 			i += 1;
 		}
 	}
-	vector.swap(i, vector.len() - 1);
+	vector.swap(i,vector.len() - 1);
 	i
 }
 
-fn print_vec(vector: &[usize]) {
+fn print_slice(vector: &[usize]) {
 	println!("{:?}", vector);
+}
+
+fn print_vec(vector: Vec<usize>){
+	println!("{:?}",vector);
 }
