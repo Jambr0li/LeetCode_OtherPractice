@@ -2,25 +2,22 @@ def generateParenthesis(n):
 	stack = []
 	result = []
 
-	def addparenthesis(openN, closedN):
+	def add_par(openN, closedN):
 		if openN == closedN == n:
 			result.append("".join(stack))
 			return
 
 		if openN < n:
 			stack.append("(")
-			addparenthesis(openN + 1, closedN)
+			add_par(openN + 1, closedN)
 			stack.pop()
 
 		if openN > closedN:
 			stack.append(")")
-			addparenthesis(openN, closedN + 1)
+			add_par(openN, closedN + 1)
 			stack.pop()
-
-	addparenthesis(0,0)
+	add_par(0,0)
 	return result
-
-
 print(generateParenthesis(3))
 
 
