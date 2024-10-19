@@ -22,7 +22,7 @@ def searchMatrix(matrix, target):
 			l = m + 1
 		elif target < matrix[row][m]:
 			r = m - 1
-		else:
+		else:cd
 			return True
 	return False
 
