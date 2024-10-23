@@ -18,6 +18,6 @@ def graph(arr):
 	return "".join(list(res)[0:-1])
 
 
-print(graph([10,5,3,1,4]))
-# print(graph([10,12,8,2,4]))
+# print(graph([10,5,3,1,4]))
+print(graph([20,12,8,2,4]))
 # print(graph([0]))
