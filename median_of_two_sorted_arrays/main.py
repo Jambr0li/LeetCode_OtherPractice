@@ -1,6 +1,6 @@
 def findMedianSortedArrays(nums1, nums2):
 	A, B = nums1,nums2
-	if len(A) < len(B):
+	if len(A) > len(B):
 		A,B = B,A # I want A to be the smaller array.
 	ALength = len(A) - 1
 	BLength = len(B) - 1
