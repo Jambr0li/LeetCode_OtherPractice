@@ -12,13 +12,15 @@ second.next = third
 # print(head.val)
 # print(second.next.val)
 def reverseList(head):
-    prev, curr = None, head
+    prev = None
+    curr = head
 
     while curr:
         temp = curr.next
         curr.next = prev
         prev = curr
         curr = temp
+    return prev
 
 reverseList(head)
 
