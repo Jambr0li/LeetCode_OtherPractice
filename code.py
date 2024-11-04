@@ -7,9 +7,6 @@ You are allowed to reverse any rows or columns to maximize the sum.
 For example, if given a 4×4 matrix, you want to find the maximum possible sum of the 2×2 matrix in the top-left corner after flipping rows or columns.
 ''' 
 
-
-
-
 # [1,1,4,1]
 # [1,1,1,4]
 # [1,1,1,4]
